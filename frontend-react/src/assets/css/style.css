@@ -1,0 +1,36 @@
+body{
+     background-color: #accfe9;
+}
+
+.bg-light-dark {
+    background-color: #d2e4f1;
+}   
+
+.text-style-brand{
+    margin-top:0.2rem;
+    color: white;
+    padding: 8px;
+    background-color: rgb(60, 62, 77);
+    border-radius: 0.2rem;
+}
+
+.root{
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.footer-style{
+    /* place footer at bottom of page and good */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(60, 62, 77);
+    height: 3rem;
+
+}
