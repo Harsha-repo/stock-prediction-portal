@@ -9,15 +9,18 @@ class UserSerializer(serializers.ModelSerializer):
         fields = [ 'username', 'email', 'password']
         
     def create(self, validated_data):
+        print("Creating user with data:", validated_data)
         user = User.objects.create_user(
             username=validated_data['username'],
             email=validated_data['email'],
             password=validated_data['password']
-            
+
         )
-        
-        
+        print("User created:", user)
+
     # user = User.objects.create_user(**validated_data) # create_user method hashes the password and saves the user instance to the database
     #  ** validated data is used to unpack the validated data dictionary and pass its contents as keyword arguments to the create_user method
-    
+
+
+
         return user # create method is used to create a new user instance
