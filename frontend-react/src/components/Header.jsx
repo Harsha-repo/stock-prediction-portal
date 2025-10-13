@@ -9,7 +9,7 @@ const Header = () => {
         <Link className="navbar-brand   text-style-brand  " to={"/"}> Stock Prediction Portal</Link>
         <div>
             <Link to={"/login"}>
-            <button className='btn btn-dark '>Login</button>
+            <button className='btn btn-dark '>Login page</button>
             </Link>
             
             <Link to={"/register"}>

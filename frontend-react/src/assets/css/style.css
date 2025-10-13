@@ -45,3 +45,22 @@ body{
 
 
 }
+
+.login-css{
+
+    padding: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(104, 142, 155);
+    font-size: 0.5rem;
+    border-radius: 1rem;    
+    margin-top: 2rem;
+    content: center;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: auto;
+    box-shadow: 5px 10px 18px #888888;
+    margin-bottom: 2rem;
+    
+
+}
