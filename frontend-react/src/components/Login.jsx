@@ -2,14 +2,15 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
-
-
+import { useAuth } from '../context/AuthContext'
 
 const Login = () => {
     const  [username, setUsername] = useState('')
     const  [password, setPassword] = useState('')
     const [loading , setLoading] = useState(false)
     const navigate  = useNavigate()
+    const { login } = useAuth()
+
 
 
     const handle_submit = async (e) =>{
@@ -24,8 +25,10 @@ const Login = () => {
             localStorage.setItem('access_token', response.data.access)
             localStorage.setItem('refresh_token', response.data.refresh)
             console.log('login successfull')
+            login()
             console.log(response.data)
-            navigate('/')
+            navigate('/Dashboard')
+            
 
         }
 
@@ -41,7 +44,8 @@ const Login = () => {
 
 
   return (
-    <div className="col col-md-6">
+    <div className='container '>
+    <div className="col col-md-6 ">
     <div className="container login-css">
         <div className="row">
             <div className="col-md-6 offset-md-3">
@@ -49,12 +53,13 @@ const Login = () => {
                 <form action="" onSubmit={handle_submit}>
                     <input type='text' className='form-control mb-3' placeholder='username' value={username} onChange={(e)=>setUsername(e.target.value)} required />
                     <input type='password' className='form-control mb-3' placeholder='password' value={password} onChange={(e)=>setPassword(e.target.value)} required />
-
+                    
                     <button className='btn btn-dark mb-3'>Login</button>
                     {loading? <h6>Loading...</h6> : null}
                 </form>
             </div>
         </div>
+    </div>
     </div>
     </div>  
   )

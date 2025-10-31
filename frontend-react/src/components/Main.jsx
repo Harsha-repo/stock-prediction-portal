@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Main = () => {
   return (
@@ -12,8 +13,8 @@ const Main = () => {
                 This portal is built using React for the frontend and Django for the backend.
 
                 </p>
-
-            <button className='btn btn-dark btn-lg mt-3'>Get Started</button>
+            <Link to ={"/login"}>
+            <button className='btn btn-dark btn-lg mt-3'>Get Started</button></Link>
         </div>
     </div>
     </>
