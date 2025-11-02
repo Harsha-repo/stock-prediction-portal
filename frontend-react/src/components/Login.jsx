@@ -44,9 +44,9 @@ const Login = () => {
 
 
   return (
-    <div className='container '>
-    <div className="col col-md-6 ">
-    <div className="container login-css">
+    <div className='container  '>
+    <div className="col col justify-content-center">
+    <div className="container justify-content-center ">
         <div className="row">
             <div className="col-md-6 offset-md-3">
                 <h2 className='text-center mt-4 mb-4'>Login to your account</h2>

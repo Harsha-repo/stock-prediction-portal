@@ -1,0 +1,3 @@
+- [ ] Update backend-drf/api/views.py to return proper error response for invalid ticker
+- [ ] Update frontend-react/src/components/Dashboard_components/Dashboard.jsx to handle errors in catch block and display them
+- [ ] Test the error display by submitting an invalid ticker
